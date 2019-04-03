@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1554268835 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\main.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	"sq_list.h"
+	"singly_linked_list.h"
+	"main.h"
+
+1554257997 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\sq_list\sq_list.h
+	"main.h"
+
+1527305361 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\\main.h
+
+1554257111 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\singly_linked_list\singly_linked_list.h
+	"main.h"
+
+1527305361 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\main.h
+
+1554256976 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\singly_linked_list\singly_linked_list.cpp
+	<cstdio>
+	<cstdlib>
+	"singly_linked_list.h"
+
+1554257340 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\sq_list\sq_list.cpp
+	<cstdio>
+	<cstdlib>
+	"sq_list.h"
+
+1554268713 source:d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\singly_linked_list.cpp
+	<cstdio>
+	<cstdlib>
+	"singly_linked_list.h"
+
+1554268217 d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\singly_linked_list.h
+
+1554268737 source:d:\projects\001_codeblocks_project\c++\wd_ds\sq_list\sq_list.cpp
+	<cstdio>
+	<cstdlib>
+	"sq_list.h"
+
+1554268493 d:\projects\001_codeblocks_project\c++\wd_ds\sq_list\sq_list.h
+

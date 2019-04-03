@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="chapter2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/chapter2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="D:/Projects/001_codeblocks_project/c++/WD_DS/chapter2/" />
+					<Add directory="../singly_linked_list" />
+					<Add directory="../sequence_list" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/chapter2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../sequence_list/sq_list.cpp" />
+		<Unit filename="../sequence_list/sq_list.h" />
+		<Unit filename="../singly_linked_list/sl_list.cpp" />
+		<Unit filename="../singly_linked_list/sl_list.h" />
+		<Unit filename="chapter2_2.cpp" />
+		<Unit filename="chapter2_2.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion>
+				<search_path add="D:\Projects\001_codeblocks_project\c++\WD_DS\chapter2\" />
+				<search_path add="..\singly_linked_list" />
+				<search_path add="..\sequence_list" />
+			</code_completion>
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

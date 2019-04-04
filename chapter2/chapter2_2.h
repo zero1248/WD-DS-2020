@@ -10,11 +10,10 @@
 */
 
 #ifndef __CHAPTER2_2_H__
-#defien __CHAPTER2_2_H__
+#define __CHAPTER2_2_H__
+#include "sq_list.h"
 
-#include "sq_lish.h"
-
-
+bool Del_Min(SqList&, ElemType_SqLlist&);
 
 
 

@@ -32,7 +32,12 @@ bool PriorElem_Sq(SqList&, ElemType_SqLlist, ElemType_SqLlist&);
 bool NextElem_Sq(SqList&, ElemType_SqLlist, ElemType_SqLlist&);
 bool ListInsert_Sq(SqList&, int, ElemType_SqLlist);
 bool ListDelete_Sq(SqList&, int, ElemType_SqLlist&);
+
+
 bool PrintList_Sq(SqList&);
+bool generate_Test_Set(SqList&, int);
+
+
 
 
 #endif //__SQ_LIST_H__

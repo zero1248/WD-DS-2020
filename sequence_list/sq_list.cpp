@@ -10,7 +10,10 @@
 */
 #include <cstdio>
 #include <cstdlib>
+#include <fstream>
 #include "sq_list.h"
+#include "test_set.h"
+
 
 /****************************linear list**********************************
 **************************************************************************/
@@ -63,11 +66,14 @@
 /******************************linear list*********************************/
 /**************************************************************************/
 
+/*-------------------------------------------------------------------------
+                               basic options
+--------------------------------------------------------------------------*/
 
 /**********************************************************************/
 /*
- * creat a new sequence linear list
- * Parameters: a new squence linear list
+ * creat a new sequence list
+ * Parameters: a new squence list
  * Returns: status
  */
 /**********************************************************************/
@@ -85,8 +91,8 @@ bool InitList_Sq(SqList &L){
 
 /**********************************************************************/
 /*
- * destroy an exist sequence linear list
- * Parameters: an exist squence linear list
+ * destroy an exist sequence list
+ * Parameters: an exist squence list
  * Returns: status
  */
 /**********************************************************************/
@@ -102,8 +108,8 @@ bool DestroyList_Sq(SqList &L){
 
 /**********************************************************************/
 /*
- * clear a sequence linear list
- * Parameters: an exist squence linear list
+ * clear a sequence list
+ * Parameters: an exist squence list
  * Returns: status
  */
 /**********************************************************************/
@@ -116,8 +122,8 @@ bool ClearList_Sq(SqList &L){
 
 /**********************************************************************/
 /*
- * judge if a sequence linear list is empty
- * Parameters: an exist squence linear list
+ * judge if a sequence list is empty
+ * Parameters: an exist squence list
  * Returns: logic value
  */
 /**********************************************************************/
@@ -131,8 +137,8 @@ bool ListEmpty_Sq(SqList &L){
 
 /**********************************************************************/
 /*
- * get the length of a sequence linear list
- * Parameters: an exist squence linear list
+ * get the length of a sequence list
+ * Parameters: an exist squence list
  * Returns: length of the list
  */
 /**********************************************************************/
@@ -143,8 +149,8 @@ int ListLength_Sq(SqList &L){
 
 /**********************************************************************/
 /*
- * get the i th value of a sequence linear list
- * Parameters: an exist squence linear list, location i, element
+ * get the i th value of a sequence list
+ * Parameters: an exist squence ist, location i, element
  * Returns: status
  */
 /**********************************************************************/
@@ -164,7 +170,7 @@ bool LocateElem_Sq(SqList &L, ElemType_SqLlist* e){
 /**********************************************************************/
 /*
  * return the prior elmement of cur_e using pre_e
- * Parameters: an exist squence linear list, element cur_e, element pre_e
+ * Parameters: an exist squence list, element cur_e, element pre_e
  * Returns: status
  */
 /**********************************************************************/
@@ -186,7 +192,7 @@ bool PriorElem_Sq(SqList &L, ElemType_SqLlist cur_e, ElemType_SqLlist &pre_e){
 /**********************************************************************/
 /*
  * return the next elmement of cur_e using pre_e
- * Parameters: an exist squence linear list, element cur_e, element pre_e
+ * Parameters: an exist squence list, element cur_e, element pre_e
  * Returns: status
  */
 /**********************************************************************/
@@ -202,13 +208,13 @@ bool NextElem_Sq(SqList &L, ElemType_SqLlist cur_e, ElemType_SqLlist &next_e){
     }
     next_e = NULL;
 
-    return true;
+    return false;
 }
 
 /**********************************************************************/
 /*
  * insert new element e before the i element
- * Parameters: an exist squence linear list, location i, new element e
+ * Parameters: an exist squence list, location i, new element e
  * Returns: status
  */
 /**********************************************************************/
@@ -238,8 +244,8 @@ bool ListInsert_Sq(SqList &L, int i, ElemType_SqLlist e){
 
 /**********************************************************************/
 /*
- * Delete element from squence linear list
- * Parameters: an exist squence linear list, location i, deleted element
+ * Delete element from squence list
+ * Parameters: an exist squence list, location i, deleted element
  * Returns: status
  */
 /**********************************************************************/
@@ -247,6 +253,7 @@ bool ListDelete_Sq(SqList &L, int i, ElemType_SqLlist &e){
 
 	ElemType_SqLlist* q; //point to delete location
 	ElemType_SqLlist* p; //shift pointer
+
 
 	if( i < 1 || i > L.length+1 )
 		return false;
@@ -263,10 +270,20 @@ bool ListDelete_Sq(SqList &L, int i, ElemType_SqLlist &e){
     return true;
 }
 
+
+
+/***********************************************************************/
+
+
+
+/*-------------------------------------------------------------------------
+                               other options
+--------------------------------------------------------------------------*/
+
 /**********************************************************************/
 /*
- * print a squence linear list
- * Parameters: an exist squence linear list
+ * print a squence list
+ * Parameters: an exist squence list
  * Returns: status
  */
 /**********************************************************************/
@@ -275,11 +292,11 @@ bool PrintList_Sq(SqList &L){
 	int i = 0;
 
 	if(!(L.length)){
-        printf("the sequence linear list is empty \n");
+        printf("the sequence list is empty \n");
         return true;
     }
 
-    printf("the sequence linear list contains below:\n");
+    printf("the sequence list contains below:\n");
 	for (i = 0; i < L.length; i++){
 		printf("%c",L.data[i]);
 	}
@@ -287,5 +304,39 @@ bool PrintList_Sq(SqList &L){
 
     return true;
 }
+
+/**********************************************************************/
+/*
+ * generate a squence list from a exist file
+ * Parameters: an exist squence list
+ * Returns: status
+ */
+/**********************************************************************/
+bool generate_Test_Set(SqList &L, int line){
+
+    string data_str;
+    if(L.length != 0){ // only for empty list
+        cout << "generate test set failed" << endl;
+        return false;
+    }
+
+    if(get_line_n(data_str, line, test_set_path)){
+
+        int len = data_str.size();
+        for(int i=0; i<len; i++){
+            char e = data_str[i];
+            ListInsert_Sq(L, i+1, e);
+        }
+    }
+    else{
+        cout << "generate test set failed" << endl;
+        return false;
+    }
+
+    return true;
+}
+
+
+
 
 

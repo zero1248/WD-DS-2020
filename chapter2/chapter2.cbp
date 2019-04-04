@@ -16,6 +16,8 @@
 					<Add directory="D:/Projects/001_codeblocks_project/c++/WD_DS/chapter2/" />
 					<Add directory="../singly_linked_list" />
 					<Add directory="../sequence_list" />
+					<Add directory="../../WD_DS" />
+					<Add directory="../test_set" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -39,6 +41,8 @@
 		<Unit filename="../sequence_list/sq_list.h" />
 		<Unit filename="../singly_linked_list/sl_list.cpp" />
 		<Unit filename="../singly_linked_list/sl_list.h" />
+		<Unit filename="../test_set/test_set.cpp" />
+		<Unit filename="../test_set/test_set.h" />
 		<Unit filename="chapter2_2.cpp" />
 		<Unit filename="chapter2_2.h" />
 		<Unit filename="main.cpp" />
@@ -47,6 +51,8 @@
 				<search_path add="D:\Projects\001_codeblocks_project\c++\WD_DS\chapter2\" />
 				<search_path add="..\singly_linked_list" />
 				<search_path add="..\sequence_list" />
+				<search_path add="..\..\WD_DS" />
+				<search_path add="..\test_set" />
 			</code_completion>
 			<envvars />
 			<debugger />

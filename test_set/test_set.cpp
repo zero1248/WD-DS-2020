@@ -17,6 +17,7 @@ extern const char test_set_path[] = "D:\\Projects\\001_codeblocks_project\\c++\\
 /**********************************************************************/
 /*
  * get the nth line of a file
+ * only for char string
  * Parameters: an exist string, line num, file path
  * Returns: status
  */

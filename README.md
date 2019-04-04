@@ -16,3 +16,9 @@ sequence_list —— 顺序表
 
 singly_linked_list —— 单链表
 
+test_set —— 测试数据集
+
+- 为方便题目测试数据的输入及管理，使用文件读取的方式获取测试数据。
+
+- 需要将 test_set.cpp 中的 test_set_path 数组中的字符串改成 测试数据文件所在的实际位置，'\\' 要写成转义字符 '\\\\'。
+

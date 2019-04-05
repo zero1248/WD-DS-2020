@@ -13,60 +13,33 @@
 #include <cstdlib>
 #include "sq_list.h"
 #include "sl_list.h"
-#include "main.h"
+//#include "main.h"
+#include "chapter2_2.h"
 //#include "test_set.h"
 
 using namespace std;
 
 int main(void){
 
-	SqList list_test;
+// 2.2 “ª°¢1.Ã‚ ≤‚ ‘
+	SqList L;
+	ElemType_SqLlist e = 0;
 	ElemType_SqLlist temp_value = 0;
+    InitList_Sq(L);
+    for(int i=0; i<13; i++){
+        cout << "test" << i+1 << ": " << endl;
+        generate_Test_Set(L, i+1);
+        PrintList_Sq(L);
+        Del_Min(L, e);
+        PrintList_Sq(L);
+        cout << "Delete: " << e << endl << endl;
+        ClearList_Sq(L);
+    }
 
-	InitList_Sq(list_test);
-	generate_Test_Set(list_test, 5);
-	PrintList_Sq(list_test);
 
-//	SqList list_test;
-//	ElemType_SqLlist temp_value = 0;
-//
-//	InitList_Sq(list_test);
-//	PrintList_Sq(list_test);
-//
-//	ListInsert_Sq(list_test, 1, '1');
-//	PrintList_Sq(list_test);
-//	ListInsert_Sq(list_test, 2, '2');
-//	PrintList_Sq(list_test);
-//	ListInsert_Sq(list_test, 3, '3');
-//	PrintList_Sq(list_test);
-//	ListInsert_Sq(list_test, 4, '4');
-//	PrintList_Sq(list_test);
-//	ListInsert_Sq(list_test, 5, '5');
-//	PrintList_Sq(list_test);
-//	printf("the sequence linear list %s an empty list \n",ListEmpty_Sq(list_test)?"is not":"is");
-//
-//	ListDelete_Sq(list_test, 5, temp_value);
-//	PrintList_Sq(list_test);
-//	printf("delete element \"%c\" from the sequence linear list \n", temp_value);
-//
-//	GetElem_Sq(list_test, 3, temp_value);
-//	printf("the third element of the sequence linear list is %c \n", temp_value);
-//
-//	printf("the sequence linear list has %d elements \n",ListLength_Sq(list_test));
-//
-//	PriorElem_Sq(list_test, '2', temp_value);
-//	printf("the prior element of '2' in the sequence linear list is %c \n", temp_value);
-//
-//	NextElem_Sq(list_test, '2', temp_value);
-//	printf("the next element of '2' in the sequence linear list is %c \n", temp_value);
-//
-//	DestroyList_Sq(list_test);
-//	PrintList_Sq(list_test);
-//
-//	ClearList_Sq(list_test);
-//	PrintList_Sq(list_test);
-//
-//	printf("the sequence linear list %s an empty list \n",ListEmpty_Sq(list_test)?"is not":"is");
+
+
+
 
 
 

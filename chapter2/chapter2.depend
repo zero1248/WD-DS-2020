@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1554436301 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\main.cpp
+1554914153 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\main.cpp
 	<iostream>
 	<cstdio>
 	<cstdlib>
@@ -41,14 +41,16 @@
 
 1554268493 d:\projects\001_codeblocks_project\c++\wd_ds\sq_list\sq_list.h
 
-1554399477 source:d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.cpp
+1554913528 source:d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.cpp
 	<cstdio>
 	<cstdlib>
 	<fstream>
+	<typeinfo>
+	<iostream>
 	"sq_list.h"
 	"test_set.h"
 
-1554398538 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.h
+1554910150 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.h
 
 1554271937 source:d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\sl_list.cpp
 	<cstdio>
@@ -57,17 +59,20 @@
 
 1554271958 d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\sl_list.h
 
-1554399638 source:d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.cpp
+1554913607 source:d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.cpp
 	"test_set.h"
 
-1554398901 d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.h
+1554900165 d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.h
 	<string>
 	<fstream>
 	<iostream>
+	<sstream>
 
-1554435902 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_2.cpp
+1554914094 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_2.cpp
+	<iostream>
 	"chapter2_2.h"
+	<cstring>
 
-1554394749 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_2.h
+1554912819 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_2.h
 	"sq_list.h"
 

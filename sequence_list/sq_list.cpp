@@ -11,60 +11,12 @@
 #include <cstdio>
 #include <cstdlib>
 #include <fstream>
+#include <typeinfo>
+#include <iostream>
 #include "sq_list.h"
 #include "test_set.h"
 
-
-/****************************linear list**********************************
-**************************************************************************/
-/*
-
-	SqList list_test;
-	ElemType_SqLlist temp_value = 0;
-
-	InitList_Sq(&list_test);
-	PrintList_Sq(&list_test);
-
-	ListInsert_Sq(&list_test, 1, '1');
-	PrintList_Sq(&list_test);
-	ListInsert_Sq(&list_test, 2, '2');
-	PrintList_Sq(&list_test);
-	ListInsert_Sq(&list_test, 3, '3');
-	PrintList_Sq(&list_test);
-	ListInsert_Sq(&list_test, 4, '4');
-	PrintList_Sq(&list_test);
-	ListInsert_Sq(&list_test, 5, '5');
-	PrintList_Sq(&list_test);
-	printf("the sequence linear list %s an empty list \n",ListEmpty_Sq(&list_test)?"is not":"is");
-
-	ListDelete_Sq(&list_test, 5, &temp_value);
-	PrintList_Sq(&list_test);
-	printf("delete element \"%c\" from the sequence linear list \n", temp_value);
-
-	GetElem_Sq(&list_test, 3, &temp_value);
-	printf("the third element of the sequence linear list is %c \n", temp_value);
-
-	printf("the sequence linear list has %d elements \n",ListLength_Sq(&list_test));
-
-	PriorElem_Sq(&list_test, '2', &temp_value);
-	printf("the prior element of '2' in the sequence linear list is %c \n", temp_value);
-
-	NextElem_Sq(&list_test, '2', &temp_value);
-	printf("the next element of '2' in the sequence linear list is %c \n", temp_value);
-
-//	DestroyList_Sq(&list_test);
-//	PrintList_Sq(&list_test);
-
-	ClearList_Sq(&list_test);
-	PrintList_Sq(&list_test);
-
-//	printf("the sequence linear list %s an empty list \n",ListEmpty_Sq(&list_test)?"is not":"is");
-
-//	printf("NULL is %d %s",NULL,NULL);
-
-*/
-/******************************linear list*********************************/
-/**************************************************************************/
+using namespace std;
 
 /*-------------------------------------------------------------------------
                                basic options
@@ -79,8 +31,8 @@
 /**********************************************************************/
 bool InitList_Sq(SqList &L){
 
-	L.data = (ElemType_SqLlist *)malloc(LIST_INIT_SIZE * sizeof(ElemType_SqLlist));  // C
-//	L.data = new ElemType_SqLlist[LIST_INIT_SIZE]; // C++
+	L.data = (ElemType_SqList *)malloc(LIST_INIT_SIZE * sizeof(ElemType_SqList));  // C
+//	L.data = new ElemType_SqList[LIST_INIT_SIZE]; // C++
 	if (!(L.data))
         exit(false);       //assign failed
 	L.length = 0;
@@ -154,7 +106,7 @@ int ListLength_Sq(SqList &L){
  * Returns: status
  */
 /**********************************************************************/
-bool GetElem_Sq(SqList &L, int i, ElemType_SqLlist &e){
+bool GetElem_Sq(SqList &L, int i, ElemType_SqList &e){
 
     if(i<1 || i>L.length)
         return false;
@@ -162,7 +114,7 @@ bool GetElem_Sq(SqList &L, int i, ElemType_SqLlist &e){
     return true;
 }
 
-bool LocateElem_Sq(SqList &L, ElemType_SqLlist* e){
+bool LocateElem_Sq(SqList &L, ElemType_SqList* e){
 
     return true;
 }
@@ -174,7 +126,7 @@ bool LocateElem_Sq(SqList &L, ElemType_SqLlist* e){
  * Returns: status
  */
 /**********************************************************************/
-bool PriorElem_Sq(SqList &L, ElemType_SqLlist cur_e, ElemType_SqLlist &pre_e){
+bool PriorElem_Sq(SqList &L, ElemType_SqList cur_e, ElemType_SqList &pre_e){
 
     int i = 0;
 
@@ -196,7 +148,7 @@ bool PriorElem_Sq(SqList &L, ElemType_SqLlist cur_e, ElemType_SqLlist &pre_e){
  * Returns: status
  */
 /**********************************************************************/
-bool NextElem_Sq(SqList &L, ElemType_SqLlist cur_e, ElemType_SqLlist &next_e){
+bool NextElem_Sq(SqList &L, ElemType_SqList cur_e, ElemType_SqList &next_e){
 
     int i = 0;
 
@@ -218,16 +170,16 @@ bool NextElem_Sq(SqList &L, ElemType_SqLlist cur_e, ElemType_SqLlist &next_e){
  * Returns: status
  */
 /**********************************************************************/
-bool ListInsert_Sq(SqList &L, int i, ElemType_SqLlist e){
+bool ListInsert_Sq(SqList &L, int i, ElemType_SqList e){
 
-	ElemType_SqLlist* newbase;
-	ElemType_SqLlist* q; //point to insert location
-	ElemType_SqLlist* p; //shift pointer
+	ElemType_SqList* newbase;
+	ElemType_SqList* q; //point to insert location
+	ElemType_SqList* p; //shift pointer
 
 	if( i < 1 || i > L.length+1 )
 		return false;
 	if( i > L.listsize ){  //current storage space is full, increase assignment
-		newbase = (ElemType_SqLlist*)realloc(L.data, (L.listsize + LIST_INCREMENT) * sizeof(ElemType_SqLlist));
+		newbase = (ElemType_SqList*)realloc(L.data, (L.listsize + LIST_INCREMENT) * sizeof(ElemType_SqList));
 		if(!newbase)
 			exit(false);
 		L.data = newbase;
@@ -249,10 +201,10 @@ bool ListInsert_Sq(SqList &L, int i, ElemType_SqLlist e){
  * Returns: status
  */
 /**********************************************************************/
-bool ListDelete_Sq(SqList &L, int i, ElemType_SqLlist &e){
+bool ListDelete_Sq(SqList &L, int i, ElemType_SqList &e){
 
-	ElemType_SqLlist* q; //point to delete location
-	ElemType_SqLlist* p; //shift pointer
+	ElemType_SqList* q; //point to delete location
+	ElemType_SqList* p; //shift pointer
 
 
 	if( i < 1 || i > L.length+1 )
@@ -298,7 +250,10 @@ bool PrintList_Sq(SqList &L){
 
     printf("the sequence list contains below:\n");
 	for (i = 0; i < L.length; i++){
-		printf("%c",L.data[i]);
+        if(typeid(ElemType_SqList) == typeid(char))
+            printf("%c",L.data[i]);
+        else if(typeid(ElemType_SqList) == typeid(int))
+            printf("%d\n",L.data[i]);
 	}
 	printf("\n");
 
@@ -308,19 +263,19 @@ bool PrintList_Sq(SqList &L){
 /**********************************************************************/
 /*
  * generate a squence list from a exist file
- * Parameters: an exist squence list
+ * Parameters: an exist squence list, and line
  * Returns: status
  */
 /**********************************************************************/
-bool generate_Test_Set(SqList &L, int line){
+bool Generate_Test_Set(SqList &L, int line){
 
     string data_str;
-    if(L.length != 0){ // only for empty list
+    if(L.length != 0 || typeid(ElemType_SqList) != typeid(char)){ // only for empty list
         cout << "generate test set failed" << endl;
         return false;
     }
 
-    if(get_line_n(data_str, line, test_set_path)){
+    if(get_line_char(data_str, line, test_set_path)){
 
         int len = data_str.size();
         for(int i=0; i<len; i++){
@@ -329,53 +284,85 @@ bool generate_Test_Set(SqList &L, int line){
         }
     }
     else{
-        cout << "generate test set failed" << endl;
+        cout << "generate test set failed, get line failed" << endl;
         return false;
     }
 
     return true;
 }
 
+bool Generate_Test_Set(SqList &L,int s, int e){
+
+    if(L.length !=0 || s > e || typeid(ElemType_SqList) != typeid(int)){
+        cout << "generate test set failed" << endl;
+        return false;
+    }
+    int val, k = 1;
+    for(int i=s; i<=e; i++){
+        if(get_line_int(val, i, test_set_path_int)){
+            ListInsert_Sq(L, k++, val);
+        }
+        else{
+            cout << "generate test set failed, get line failed" << endl;
+            return false;
+        }
+    }
+    return true;
+}
+
+/**********************************************************************/
+/*
+ * bubble sort
+ * Parameters: an exist squence list
+ * Returns: status
+ */
+/**********************************************************************/
+bool Bubble_Sort(SqList &L){
+
+    int len = L.length;
+    ElemType_SqList temp;
+    for(int i=0; i<len; i++){
+        for(int j=1; j<len-i; j++){
+            if(L.data[j] < L.data[j-1]){
+                temp = L.data[j];
+                L.data[j] = L.data[j-1];
+                L.data[j-1] = temp;
+            }
+        }
+    }
+    return true;
+}
+
+/**********************************************************************/
+/*
+ * binary search
+ * Parameters: an exist squence list, and element x
+ * Returns: position
+ */
+/**********************************************************************/
+bool Binary_Search(SqList L, ElemType_SqList x, int &pos){
+
+    int low = 0, high = L.length-1;
+    int mid;
+    while(low <= high){
+        mid = (low + high) / 2;
+        if(L.data[mid] == x){
+            pos = mid + 1;  //pos 是 x 的位置
+            return true;
+        }
+        else if(L.data[mid] < x)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+    pos = high + 1; //pos 是比x小的数中最大数的位置
+    return false;
+}
 
 
-//	SqList list_test;
-//	ElemType_SqLlist temp_value = 0;
-//
-//	InitList_Sq(list_test);
-//	PrintList_Sq(list_test);
-//
-//	ListInsert_Sq(list_test, 1, '1');
-//	PrintList_Sq(list_test);
-//	ListInsert_Sq(list_test, 2, '2');
-//	PrintList_Sq(list_test);
-//	ListInsert_Sq(list_test, 3, '3');
-//	PrintList_Sq(list_test);
-//	ListInsert_Sq(list_test, 4, '4');
-//	PrintList_Sq(list_test);
-//	ListInsert_Sq(list_test, 5, '5');
-//	PrintList_Sq(list_test);
-//	printf("the sequence linear list %s an empty list \n",ListEmpty_Sq(list_test)?"is not":"is");
-//
-//	ListDelete_Sq(list_test, 5, temp_value);
-//	PrintList_Sq(list_test);
-//	printf("delete element \"%c\" from the sequence linear list \n", temp_value);
-//
-//	GetElem_Sq(list_test, 3, temp_value);
-//	printf("the third element of the sequence linear list is %c \n", temp_value);
-//
-//	printf("the sequence linear list has %d elements \n",ListLength_Sq(list_test));
-//
-//	PriorElem_Sq(list_test, '2', temp_value);
-//	printf("the prior element of '2' in the sequence linear list is %c \n", temp_value);
-//
-//	NextElem_Sq(list_test, '2', temp_value);
-//	printf("the next element of '2' in the sequence linear list is %c \n", temp_value);
-//
-//	DestroyList_Sq(list_test);
-//	PrintList_Sq(list_test);
-//
-//	ClearList_Sq(list_test);
-//	PrintList_Sq(list_test);
-//
-//	printf("the sequence linear list %s an empty list \n",ListEmpty_Sq(list_test)?"is not":"is");
+
+
+
+
+
 

@@ -12,19 +12,16 @@
 #include "sq_stack.h"
 
 
-bool InitStack_Sq(SqStack &S){
+void InitStack_Sq(SqStack &S){
 
     S.data = new ElemType_SqStack[stack_size];
     S.top = -1;
-
-    return true;
 }
 
-bool DestroyStack_Sq(SqStack &S){
+void DestroyStack_Sq(SqStack &S){
 
     delete[] S.data;
     S.top = -1;
-    return true;
 }
 
 bool StackEmpty_Sq(SqStack S){

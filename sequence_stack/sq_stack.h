@@ -24,8 +24,8 @@ typedef struct SqStack{
 }SqStack;
 
 
-extern bool InitStack_Sq(SqStack &S);
-extern bool DestroyStack_Sq(SqStack &S);
+extern void InitStack_Sq(SqStack &S);
+extern void DestroyStack_Sq(SqStack &S);
 extern bool StackEmpty_Sq(SqStack S);
 extern bool StackFull_Sq(SqStack S);
 extern bool StackPush_Sq(SqStack &S, ElemType_SqStack e);

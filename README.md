@@ -12,9 +12,9 @@
 
 chapter2 —— 第二章习题
 
-sequence_list —— 顺序表
+sequence_list —— 顺序表（大部分用 C 语言风格实现，使用函数和结构体）
 
-singly_linked_list —— 单链表
+singly_linked_list —— 单链表（完全用 C++ 风格实现，使用类）
 
 test_set —— 测试数据集
 
@@ -22,3 +22,4 @@ test_set —— 测试数据集
 
 - 需要将 test_set.cpp 中的 test_set_path 数组中的字符串改成 测试数据文件所在的实际位置，'\\' 要写成转义字符 '\\\\'。
 
+sequence_stack —— 顺序栈（用 C 语言风格实现，使用函数和结构体）

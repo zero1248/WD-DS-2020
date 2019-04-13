@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1555131491 source:d:\projects\001_codeblocks_project\c++\wd_ds\sequence_stack\sq_stack.cpp
+	"sq_stack.h"
+
+1555131519 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_stack\sq_stack.h
+
+1555131393 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter3\main.cpp
+	<iostream>
+	"sq_stack.h"
+

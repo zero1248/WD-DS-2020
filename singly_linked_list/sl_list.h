@@ -1,25 +1,62 @@
+/*
+*********************************************************************************************************
+*
+* file name:   sl_list.h
+* creator:     Isaac
+* date:        20190412
+* description: singly link list
+*
+*********************************************************************************************************
+*/
 #ifndef __SL_LIST_H__
 #define __SL_LIST_H__
 
+#include <iostream>
 
-typedef char ElemType_SLlist;
+using namespace std;
 
-typedef struct LNode{
-    ElemType_SLlist  data;
-    struct LNode  *next;
-}LNode, *SLinklist;
 
-bool InitList_SL(SLinklist*);
-bool CreatList_SL(SLinklist, ElemType_SLlist);
-bool DestroyList_SL(SLinklist);
-bool ClearList_SL(SLinklist);
-bool ListEmpty_SL(SLinklist);
-int ListLength_SL(SLinklist);
-bool GetElem_SL(SLinklist, int, ElemType_SLlist*);
-bool PriorElem_SL(SLinklist, ElemType_SLlist, ElemType_SLlist*);
-bool NextElem_SL(SLinklist, ElemType_SLlist, ElemType_SLlist*);
-bool ListInsert_SL(SLinklist, int, ElemType_SLlist);
-bool ListDelete_SL(SLinklist, int, ElemType_SLlist*);
-bool PrintList_SL(SLinklist);
+//typedef int ElemType_SlList;
+typedef char ElemType_SlList;
+
+
+class SLinkList{
+
+public:
+
+    // 构造/析构
+    SLinkList();
+    ~SLinkList();
+    // 基本操作
+    bool HeadInsert(const ElemType_SlList &e);  // 头插
+    bool TailInsert(const ElemType_SlList &e);  // 尾插
+    bool Insert(int i, const ElemType_SlList &e);  // 指定位置插入
+    bool GetElem(int i, ElemType_SlList &e);
+    bool LocateElem(int &i, ElemType_SlList e);
+    bool DeleteNode(int i);
+    int GetListLength();
+    // 其他操作
+    void PrintList();
+
+private:
+
+    struct SLNode{
+        ElemType_SlList  data;
+        struct SLNode  *next;
+        SLNode(const ElemType_SlList &e): data(e),next(NULL){}
+    };
+
+    SLNode *head; //头指针
+    SLNode *tail; //尾指针
+
+    bool CreatList();
+    void ClearList();
+    bool GetNode(int i, SLNode* &p);
+    SLNode* GetNode(int i);
+    bool isEmpty();
+
+};
+
+
 
 #endif //__SL_LIST_H__

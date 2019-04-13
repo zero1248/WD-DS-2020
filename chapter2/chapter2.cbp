@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-std=c++11" />
+					<Add option="-Wall" />
 					<Add option="-g" />
 					<Add directory="D:/Projects/001_codeblocks_project/c++/WD_DS/chapter2/" />
 					<Add directory="../singly_linked_list" />

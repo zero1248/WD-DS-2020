@@ -4,7 +4,7 @@
 * file name:   main.cpp
 * creator:     Isaac
 * date:        20190403
-* description: test the data sturcture module
+* description: test the data sturcture module(chapter2)
 *
 *********************************************************************************************************
 */
@@ -19,6 +19,13 @@
 
 using namespace std;
 
+//#define CHAPTER2_2
+#define CHAPTER2_3
+
+
+
+
+#ifdef CHAPTER2_2
 int main(void){
 
 //// 只对一个线性表（char 型）进行操作
@@ -119,8 +126,6 @@ int main(void){
 //    DestroyList_Sq(N);
 
 
-
-
 // 只对一个线性表（int 型）进行操作
 // 需要把 ElemType_SqList 改成 int
 	SqList L;
@@ -148,4 +153,49 @@ int main(void){
 
 	return 0;
 }
+
+#endif // CHAPTER2_2
+
+#ifdef CHAPTER2_3
+int main(){
+
+    ElemType_SlList x = 0;
+    int loc = 0;
+    SLinkList L;
+
+    L.HeadInsert('0');
+    L.HeadInsert('1');
+    L.HeadInsert('2');
+    L.HeadInsert('3');
+    L.HeadInsert(52);
+    L.TailInsert('1');
+    L.TailInsert('2');
+    L.TailInsert('3');
+    L.Insert(1, '7');
+
+    L.PrintList();
+    cout << "list length: " << L.GetListLength() << endl;
+
+
+    L.DeleteNode(1);
+    L.PrintList();
+
+    cout << "list length: " << L.GetListLength() << endl;
+
+
+//    L.GetElem(2, x);
+//    L.LocateElem(loc, '5');
+//    cout << x << endl;
+//    cout << loc << endl;
+
+    return 0;
+}
+#endif // CHAPTER2_3
+
+
+
+
+
+
+
 

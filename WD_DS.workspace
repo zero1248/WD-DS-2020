@@ -2,5 +2,6 @@
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
 		<Project filename="chapter2/chapter2.cbp" />
+		<Project filename="chapter3/chapter3.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

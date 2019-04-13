@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1554914153 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\main.cpp
+1555122733 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\main.cpp
 	<iostream>
 	<cstdio>
 	<cstdlib>
@@ -52,12 +52,15 @@
 
 1554910150 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.h
 
-1554271937 source:d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\sl_list.cpp
+1555123506 source:d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\sl_list.cpp
+	<iostream>
 	<cstdio>
 	<cstdlib>
+	<typeinfo>
 	"sl_list.h"
 
-1554271958 d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\sl_list.h
+1555123079 d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\sl_list.h
+	<iostream>
 
 1554913607 source:d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.cpp
 	"test_set.h"
@@ -68,7 +71,7 @@
 	<iostream>
 	<sstream>
 
-1554914094 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_2.cpp
+1554914344 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_2.cpp
 	<iostream>
 	"chapter2_2.h"
 	<cstring>

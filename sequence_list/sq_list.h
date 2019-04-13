@@ -4,7 +4,7 @@
 * file name:   sq_list.h
 * creator:     Isaac
 * date:        20190403
-* description: head file of sqlist.cpp
+* description: sequence list
 *
 *********************************************************************************************************
 */

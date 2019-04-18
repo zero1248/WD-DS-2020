@@ -22,7 +22,7 @@ extern const char test_set_path_int[] = "D:\\Projects\\001_codeblocks_project\\c
  * Returns: status
  */
 /**********************************************************************/
-bool get_line_char(string &str,int n,const char* file_path){
+bool GetLine_char(string &str, int n, const char* file_path){
 
     if( n<1 ){
         cout << "line number out of range" << endl;
@@ -50,7 +50,7 @@ bool get_line_char(string &str,int n,const char* file_path){
     return true;
 }
 
-bool get_line_int(int &val, int n, const char* file_path){
+bool GetLine_int(int &val, int n, const char* file_path){
 
     if( n<1 ){
         cout << "line number out of range" << endl;

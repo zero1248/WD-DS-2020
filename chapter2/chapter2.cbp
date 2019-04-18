@@ -47,6 +47,8 @@
 		<Unit filename="../test_set/test_set.h" />
 		<Unit filename="chapter2_2.cpp" />
 		<Unit filename="chapter2_2.h" />
+		<Unit filename="chapter2_3.cpp" />
+		<Unit filename="chapter2_3.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion>

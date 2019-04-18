@@ -1,18 +1,13 @@
 /*
 *********************************************************************************************************
 *
-* file name:   chapter.h
+* file name:   BinNode.cpp
 * creator:     Isaac
-* date:        20190403
-* description: 《王道 数据结构》2.3
+* date:        20190413
+* description: binary tree node
 *
 *********************************************************************************************************
 */
-#ifndef __CHAPTER2_3_H__
-#define __CHAPTER2_3_H__
 
-//extern void Delete_x(SLinkList::SLNode* &p, ElemType_SlList x);
+#include "BinNode.h"
 
-
-
-#endif // __CHAPTER2_3_H__

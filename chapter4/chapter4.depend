@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1555236246 source:d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binary_tree.cpp
+	"binary_tree.h"
+
+1555339448 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binary_tree.h
+	<iostream>
+	"BinTree.h"
+
+1555163048 source:d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode.cpp
+	"BinNode.h"
+
+1555172094 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode.h
+
+1555234376 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter4\main.cpp
+	<iostream>
+	"binary_tree.h"
+
+1555236282 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binary_tree.cpp
+
+1555229771 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binary_tree1.h
+
+1555339457 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\bintree.h
+

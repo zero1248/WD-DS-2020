@@ -136,7 +136,6 @@ bool PriorElem_Sq(SqList &L, ElemType_SqList cur_e, ElemType_SqList &pre_e){
             return true;
         }
     }
-    pre_e = NULL;
 
 	return false;
 }
@@ -158,7 +157,6 @@ bool NextElem_Sq(SqList &L, ElemType_SqList cur_e, ElemType_SqList &next_e){
             return true;
         }
     }
-    next_e = NULL;
 
     return false;
 }
@@ -275,7 +273,7 @@ bool Generate_Test_Set(SqList &L, int line){
         return false;
     }
 
-    if(get_line_char(data_str, line, test_set_path)){
+    if(GetLine_char(data_str, line, test_set_path)){
 
         int len = data_str.size();
         for(int i=0; i<len; i++){
@@ -291,15 +289,16 @@ bool Generate_Test_Set(SqList &L, int line){
     return true;
 }
 
-bool Generate_Test_Set(SqList &L,int s, int e){
+bool Generate_Test_Set(SqList &L, int s, int e){
 
     if(L.length !=0 || s > e || typeid(ElemType_SqList) != typeid(int)){
         cout << "generate test set failed" << endl;
         return false;
     }
+
     int val, k = 1;
     for(int i=s; i<=e; i++){
-        if(get_line_int(val, i, test_set_path_int)){
+        if(GetLine_int(val, i, test_set_path_int)){
             ListInsert_Sq(L, k++, val);
         }
         else{

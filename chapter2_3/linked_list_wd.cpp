@@ -1,10 +1,10 @@
 /*
 *********************************************************************************************************
 *
-* file name:   sl_list.cpp
+* file name:   linked_list_wd.cpp
 * creator:     Isaac
-* date:        20190412
-* description: singly link list
+* date:        20190418
+* description: 按照《王道》的方式实现链表（使用类，但是链表结点为 public 属性）
 *
 *********************************************************************************************************
 */
@@ -12,22 +12,23 @@
 #include <cstdio>
 #include <cstdlib>
 #include <typeinfo>
-#include "sl_list.h"
+#include "linked_list_wd.h"
 #include "test_set.h"
 
 using namespace std;
 
 
-
+// 构造
 LinkList::LinkList(HeadNode head, ListType listtype){
 
-    CreatList(head, listtype);
+    Creat_List(head, listtype);
 
 }
 
+// 析构
 LinkList::~LinkList(){
 
-	DestroyList();
+	Destroy_List();
 }
 
 
@@ -39,7 +40,7 @@ LinkList::~LinkList(){
  * Returns: status
  */
 /**********************************************************************/
-bool LinkList::HeadInsert(const ElemType_LinkList &e){
+bool LinkList::Head_Insert(const ElemType_LinkList &e){
 
     LNode *p = new LNode(e);
     if(p){
@@ -75,7 +76,7 @@ bool LinkList::HeadInsert(const ElemType_LinkList &e){
  * Returns: none
  */
 /**********************************************************************/
-bool LinkList::TailInsert(const ElemType_LinkList &e){
+bool LinkList::Tail_Insert(const ElemType_LinkList &e){
 
     LNode *p = new LNode(e);
     if(p){
@@ -115,7 +116,7 @@ bool LinkList::Insert(int i, const ElemType_LinkList &e){
     if(_has_HeadNode){
         if(p){
 //            GetNode(i-1, q);
-            q = GetNode(i-1);
+            q = Get_Node(i-1);
             p -> next = q -> next;
             q -> next = p;
             if(p -> next == NULL)
@@ -140,7 +141,7 @@ bool LinkList::Insert(int i, const ElemType_LinkList &e){
             }
             else{
                 //    GetNode(i-1, q);
-                q = GetNode(i-1);
+                q = Get_Node(i-1);
 
                 p -> next = q -> next;
                 q -> next = p;
@@ -163,7 +164,7 @@ bool LinkList::Insert(int i, const ElemType_LinkList &e){
  * Returns: status
  */
 /**********************************************************************/
-bool LinkList::GetElem(int i, ElemType_LinkList &e){
+bool LinkList::Get_Elem(int i, ElemType_LinkList &e){
 
     if(i<1){
         cout << "get elem failed, parameter error" << endl;
@@ -190,7 +191,7 @@ bool LinkList::GetElem(int i, ElemType_LinkList &e){
  * Returns: status
  */
 /**********************************************************************/
-bool LinkList::LocateElem(int &i, ElemType_LinkList e){
+bool LinkList::Locate_Elem(int &i, ElemType_LinkList e){
 
     if(typeid(e) != typeid(ElemType_LinkList)){
         cout << "locate failed, data type error" << endl;
@@ -218,7 +219,7 @@ bool LinkList::LocateElem(int &i, ElemType_LinkList e){
  * Returns: status
  */
 /**********************************************************************/
-bool LinkList::DeleteNode(int i){
+bool LinkList::Delete_Node(int i){
 
     if(i<1){
         cout << "delete failed, parameter error" << endl;
@@ -242,7 +243,7 @@ bool LinkList::DeleteNode(int i){
         }
     }
     else{
-        p = GetNode(i-1);
+        p = Get_Node(i-1);
         if(p && p -> next){
             q = p -> next;
             p -> next = q -> next;
@@ -266,7 +267,7 @@ bool LinkList::DeleteNode(int i){
  * Returns: length
  */
 /**********************************************************************/
-int LinkList::GetListLength(){
+int LinkList::Get_List_Length(){
 
     int len = 0;
     LNode *p = _has_HeadNode ? _head->next : _head;
@@ -279,7 +280,7 @@ int LinkList::GetListLength(){
     return len;
 }
 
-void LinkList::ClearList(){
+void LinkList::Clear_List(){
 
     LNode *p = _has_HeadNode ? _head->next : _head;
     while(p){
@@ -297,7 +298,7 @@ void LinkList::ClearList(){
  * Returns: none
  */
 /**********************************************************************/
-void LinkList::PrintList(){
+void LinkList::Print_List(){
 
     LNode *p = _has_HeadNode ? _head->next : _head;
     for(; p; p=p->next){
@@ -369,7 +370,7 @@ bool LinkList::Generate_Test_Set(int s, int e){
  * Returns: status
  */
 /**********************************************************************/
-bool LinkList::CreatList(HeadNode head, ListType listtype){
+bool LinkList::Creat_List(HeadNode head, ListType listtype){
 
     _has_HeadNode = head; // 默认使用头结点
     _list_type = listtype;
@@ -398,7 +399,7 @@ bool LinkList::CreatList(HeadNode head, ListType listtype){
  * Returns: none
  */
 /**********************************************************************/
-void LinkList::DestroyList(){
+void LinkList::Destroy_List(){
 
     cout << endl << "destruct starting ..." << endl;
     LNode *p = _head;
@@ -417,7 +418,7 @@ void LinkList::DestroyList(){
  * Returns: status
  */
 /**********************************************************************/
-bool LinkList::GetNode(int i, LNode* &p){
+bool LinkList::Get_Node(int i, LNode* &p){
 
 
     if(i < (_has_HeadNode?0:1)){
@@ -439,7 +440,7 @@ bool LinkList::GetNode(int i, LNode* &p){
     return true;
 }
 
-LinkList::LNode* LinkList::GetNode(int i){  // another form
+LinkList::LNode* LinkList::Get_Node(int i){  // another form
 
     LNode* p;
     if(i < (_has_HeadNode?0:1)){
@@ -465,13 +466,118 @@ LinkList::LNode* LinkList::GetNode(int i){  // another form
  * Returns: status
  */
 /**********************************************************************/
-bool LinkList::isEmpty(){
+bool LinkList::is_Empty(){
 
     if(_has_HeadNode ? _head -> next == NULL : _head == NULL){
         return true;
     }
     return false;
 }
+
+// 冒泡排序
+void LinkList::Bubble_Sort(){
+
+    LNode *p = _has_HeadNode ? _head -> next : _head;
+    LNode *q = NULL; // 哨兵结点
+    LNode *work = p;
+    ElemType_LinkList e;
+
+    while(p != q){
+        while(work->next != q){
+            if(work -> data > work -> next -> data){
+                if(work -> next == _tail)
+                    _tail = work;
+                e = work -> data;
+                work -> data = work -> next -> data;
+                work -> next -> data = e;
+            }
+            work = work -> next;
+        }
+        q = work;
+        work = p;
+    }
+}
+
+// 选择排序
+void LinkList::Selection_Sort(){
+
+    LNode *q = _has_HeadNode ? _head -> next : _head;
+    LNode *p = NULL; // p 指向新链表，q 指向原链表剩余部分
+    ElemType_LinkList e = q -> data; // e 初始赋值剩余部分的第一个结点
+    LNode *max_pre = NULL;
+    LNode *work = q;
+
+    while(q){
+        e = q -> data;
+        work = q;
+        max_pre = NULL;
+
+        while(work -> next){
+            if(work -> next -> data > e){
+                max_pre = work;
+                e = work -> next -> data;
+            }
+            work = work -> next;
+        }
+        if(max_pre == NULL){ // 第一个结点的数据是最大的
+            work = q;
+            q = q -> next;   // 摘下结点
+            work -> next = NULL;
+        }
+        else{
+            work = max_pre -> next;
+            max_pre -> next = work -> next; // 摘下结点
+            work -> next = NULL;
+        }
+        if(p == NULL){ // 插入 p 指向的链表
+            p = work;
+            _tail = work;
+        }
+        else{
+            work -> next = p;
+            p = work;
+        }
+    }
+
+    if(_has_HeadNode){   // 用头结点指向新链表的头部
+        _head -> next = p;
+    }
+    else
+        _head = p;
+}
+
+// 插入排序
+void LinkList::Insertion_Sort(){
+
+    if(!_has_HeadNode){
+        LNode *temp = new LNode(0);  // 临时给没有头结点的链表增加头结点
+        temp -> next = _head;
+        _head = temp;
+    }
+
+    LNode *p = _head -> next;
+    LNode *q;
+    LNode *r = p -> next;  // r 指向 无序链
+
+    p -> next = NULL; // 构造只含一个数据结点的有序链表
+
+    while(r){
+        q = _head;
+        p = r -> next;
+        while(q -> next != NULL && q -> next -> data  < r -> data){
+            q = q -> next;
+        }
+        r -> next = q -> next;
+        q -> next = r;
+        r = p;
+    }
+    if(!_has_HeadNode){
+        p = _head;
+        _head = _head -> next;
+        delete p;
+    }
+}
+
 
 
 

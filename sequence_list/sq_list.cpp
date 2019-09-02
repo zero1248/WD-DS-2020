@@ -114,10 +114,24 @@ bool GetElem_Sq(SqList &L, int i, ElemType_SqList &e){
     return true;
 }
 
-bool LocateElem_Sq(SqList &L, ElemType_SqList* e){
 
-    return true;
+/**********************************************************************/
+/*
+ * get the location of certain elmement
+ * Parameters: an exist squence ist, element
+ * Returns: location(>0)
+ */
+/**********************************************************************/
+int LocateElem_Sq(SqList &L, ElemType_SqList e){
+
+    int i = 0;
+    for(i=0; i<L.length; i++){
+        if(L.data[i] == e)
+            return i+1;
+    }
+    return false;  // return 0 means e is not exist
 }
+
 
 /**********************************************************************/
 /*

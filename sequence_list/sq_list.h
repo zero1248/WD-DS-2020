@@ -24,22 +24,25 @@ typedef struct{
 	int listsize;    //current assigned storage capacity
 }SqList;
 
-extern bool InitList_Sq(SqList&);
-extern bool DestroyList_Sq(SqList&);
-extern bool ClearList_Sq(SqList&);
-extern bool ListEmpty_Sq(SqList&);
-extern int ListLength_Sq(SqList&);
-extern bool GetElem_Sq(SqList&, int, ElemType_SqList&);
-extern bool PriorElem_Sq(SqList&, ElemType_SqList, ElemType_SqList&);
-extern bool NextElem_Sq(SqList&, ElemType_SqList, ElemType_SqList&);
-extern bool ListInsert_Sq(SqList&, int, ElemType_SqList);
-extern bool ListDelete_Sq(SqList&, int, ElemType_SqList&);
+// 暂时没有写动态扩充容量的函数，直接开辟新内存并复制数据，然后回收旧内存即可
 
+extern bool InitList_Sq(SqList&);  // 初始化一个顺序表
+extern bool DestroyList_Sq(SqList&);  // 销毁一个顺序表（回收内存空间）
+extern bool ClearList_Sq(SqList&);  // 清空一个顺序表
+extern bool ListEmpty_Sq(SqList&);  // 顺序表判空
+extern int ListLength_Sq(SqList&);  // 获取表长
+extern bool GetElem_Sq(SqList&, int, ElemType_SqList&); // 获取指定位置元素
+extern int LocateElem_Sq(SqList &, ElemType_SqList); // 定位某元素首次出现的位置
+extern bool PriorElem_Sq(SqList&, ElemType_SqList, ElemType_SqList&);  // 获取指定元素的前一个元素
+extern bool NextElem_Sq(SqList&, ElemType_SqList, ElemType_SqList&);   // 获取指定元素的后一个元素
+extern bool ListInsert_Sq(SqList&, int, ElemType_SqList);  // 在指定位置插入元素
+extern bool ListDelete_Sq(SqList&, int, ElemType_SqList&); // 删除指定位置元素
 
-extern bool PrintList_Sq(SqList&);
+// 其他操作
+extern bool PrintList_Sq(SqList&);  // 打印整个顺序表
 extern bool Generate_Test_Set(SqList&, int);  // 生成 char 型测试集
-extern bool Bubble_Sort(SqList&);
-extern bool Binary_Search(SqList, ElemType_SqList, int&);
+extern bool Bubble_Sort(SqList&);  // 冒泡排序
+extern bool Binary_Search(SqList, ElemType_SqList, int&);  // 二分查找
 extern bool Generate_Test_Set(SqList&, int, int); // 生成 int 型测试集
 
 #endif //__SQ_LIST_H__

@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1555516313 source:d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.cpp
+	"test_set.h"
+
+1555516338 d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.h
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+
+1556021745 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2_3\chapter2_3_wd.cpp
+	<iostream>
+	"chapter2_3_wd.h"
+	"linked_list_wd.h"
+
+1555837243 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2_3\chapter2_3_wd.h
+	"linked_list_wd.h"
+
+1567433994 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2_3\linked_list_wd.h
+	<iostream>
+
+1567434029 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2_3\linked_list_wd.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<typeinfo>
+	"linked_list_wd.h"
+	"test_set.h"
+
+1567434016 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2_3\main.cpp
+	<iostream>
+	"chapter2_3_wd.h"
+

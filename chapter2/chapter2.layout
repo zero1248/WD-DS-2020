@@ -2,19 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="..\singly_linked_list\sl_list.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\test_set\test_set.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="7461" topLine="288" />
-		</Cursor>
-	</File>
-	<File name="..\singly_linked_list\sl_list.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="458" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\sequence_list\sq_list.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1205" topLine="22" />
+			<Cursor1 position="657" topLine="6" />
 		</Cursor>
 	</File>
 	<File name="..\test_set\test_set.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -22,19 +12,14 @@
 			<Cursor1 position="806" topLine="16" />
 		</Cursor>
 	</File>
-	<File name="..\test_set\test_set.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="1" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="657" topLine="6" />
+			<Cursor1 position="10126" topLine="400" />
 		</Cursor>
 	</File>
-	<File name="..\sequence_list\sq_list.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\linked_list\linked_list.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1513" topLine="42" />
-		</Cursor>
-	</File>
-	<File name="chapter2_2.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="440" topLine="0" />
+			<Cursor1 position="2278" topLine="69" />
 		</Cursor>
 	</File>
 	<File name="chapter2_2.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -42,19 +27,34 @@
 			<Cursor1 position="416" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="chapter2_3.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="chapter2_3.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="396" topLine="0" />
+			<Cursor1 position="429" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="..\linked_list\linked_list.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4179" topLine="163" />
+			<Cursor1 position="1686" topLine="33" />
 		</Cursor>
 	</File>
-	<File name="chapter2_3.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="chapter2_2.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="396" topLine="0" />
+			<Cursor1 position="440" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\sequence_list\sq_list.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1513" topLine="299" />
+		</Cursor>
+	</File>
+	<File name="..\sequence_list\sq_list.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1205" topLine="22" />
+		</Cursor>
+	</File>
+	<File name="chapter2_3.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2285" topLine="60" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

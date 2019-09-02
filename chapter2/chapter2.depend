@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1555583325 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\main.cpp
+1567430766 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\main.cpp
 	<iostream>
 	<cstdio>
 	<cstdlib>
 	"sq_list.h"
-	"sl_list.h"
+	"linked_list.h"
 	"chapter2_2.h"
+	"chapter2_3.h"
 
 1554257997 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\sq_list\sq_list.h
 	"main.h"
@@ -41,7 +42,7 @@
 
 1554268493 d:\projects\001_codeblocks_project\c++\wd_ds\sq_list\sq_list.h
 
-1555516276 source:d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.cpp
+1567430441 source:d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.cpp
 	<cstdio>
 	<cstdlib>
 	<fstream>
@@ -50,7 +51,7 @@
 	"sq_list.h"
 	"test_set.h"
 
-1555124939 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.h
+1567430456 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_list\sq_list.h
 
 1555583657 source:d:\projects\001_codeblocks_project\c++\wd_ds\singly_linked_list\sl_list.cpp
 	<iostream>
@@ -80,10 +81,22 @@
 1554912819 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_2.h
 	"sq_list.h"
 
-1555580951 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_3.cpp
+1555602097 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_3.cpp
 	<iostream>
 	"chapter2_3.h"
-	"sl_list.h"
+	"linked_list.h"
 
-1555580958 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_3.h
+1555602013 d:\projects\001_codeblocks_project\c++\wd_ds\chapter2\chapter2_3.h
+	"linked_list.h"
+
+1555592729 source:d:\projects\001_codeblocks_project\c++\wd_ds\linked_list\linked_list.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<typeinfo>
+	"linked_list.h"
+	"test_set.h"
+
+1567110900 d:\projects\001_codeblocks_project\c++\wd_ds\linked_list\linked_list.h
+	<iostream>
 

@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="chapter2" />
+		<Option title="chapter2_3" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/chapter2" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/chapter2_3" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -15,15 +15,12 @@
 					<Add option="-Wall" />
 					<Add option="-std=c++11" />
 					<Add option="-g" />
-					<Add directory="D:/Projects/001_codeblocks_project/c++/WD_DS/chapter2/" />
-					<Add directory="../linked_list" />
-					<Add directory="../sequence_list" />
-					<Add directory="../../WD_DS" />
+					<Add directory="D:/Projects/001_codeblocks_project/c++/WD_DS/chapter2_3/" />
 					<Add directory="../test_set" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/chapter2" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/chapter2_3" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -39,23 +36,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../linked_list/linked_list.cpp" />
-		<Unit filename="../linked_list/linked_list.h" />
-		<Unit filename="../sequence_list/sq_list.cpp" />
-		<Unit filename="../sequence_list/sq_list.h" />
 		<Unit filename="../test_set/test_set.cpp" />
 		<Unit filename="../test_set/test_set.h" />
-		<Unit filename="chapter2_2.cpp" />
-		<Unit filename="chapter2_2.h" />
-		<Unit filename="chapter2_3.cpp" />
-		<Unit filename="chapter2_3.h" />
+		<Unit filename="chapter2_3_wd.cpp" />
+		<Unit filename="chapter2_3_wd.h" />
+		<Unit filename="linked_list_wd.cpp" />
+		<Unit filename="linked_list_wd.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion>
-				<search_path add="D:\Projects\001_codeblocks_project\c++\WD_DS\chapter2\" />
-				<search_path add="..\linked_list" />
-				<search_path add="..\sequence_list" />
-				<search_path add="..\..\WD_DS" />
+				<search_path add="D:\Projects\001_codeblocks_project\c++\WD_DS\chapter2_3\" />
 				<search_path add="..\test_set" />
 			</code_completion>
 			<envvars />

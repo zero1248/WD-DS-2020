@@ -1,22 +1,22 @@
 /*
 *********************************************************************************************************
 *
-* file name:   sl_list.h
+* file name:   linked_list.h
 * creator:     Isaac
 * date:        20190412
-* description: singly link list
+* description: linked list
 *
 *********************************************************************************************************
 */
-#ifndef __SL_LIST_H__
-#define __SL_LIST_H__
+#ifndef __LINKED_LIST_H__
+#define __LINKED_LIST_H__
 
 #include <iostream>
 
 using namespace std;
 
 typedef char ElemType_LinkList;
-//typedef int ElemType_SlList;
+//typedef int ElemType_LinkList;
 
 typedef enum{
     no_headnode = 0,
@@ -52,9 +52,8 @@ public:
     bool Generate_Test_Set(int line);   // 生成 char 型测试数据的链表
     bool Generate_Test_Set(int s, int e);  // 生成 int 型测试数据的链表
 
+
 private:
-
-
 
     struct LNode{
         ElemType_LinkList  data;
@@ -64,11 +63,10 @@ private:
     };
 
     HeadNode _has_HeadNode = has_headnode; // 默认使用头结点
-    ListType _list_type = singly;          // 默认普通单链表
+    ListType _list_type = singly;          // 默认单向非循环链表
     LNode *_head; //头指针
     LNode *_tail; //尾指针
 
-    bool CreatList();
     bool CreatList(HeadNode head = has_headnode, ListType listtype = singly);
 
 
@@ -82,4 +80,4 @@ private:
 
 
 
-#endif //__SL_LIST_H__
+#endif //__LINKED_LIST_H__

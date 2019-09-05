@@ -63,6 +63,7 @@ public:
     void Bubble_Sort();
     void Selection_Sort();
     void Insertion_Sort();
+    bool is_Empty();
 
 
 private:
@@ -74,7 +75,7 @@ private:
     void Destroy_List();  // 析构
     bool Get_Node(int i, LNode* &p); // 获取指定位置结点（1）
     LNode* Get_Node(int i);          // 获取指定位置结点（2）
-    bool is_Empty();
+
 
 }; // class LinkList
 

@@ -280,6 +280,13 @@ int LinkList::Get_List_Length(){
     return len;
 }
 
+/**********************************************************************/
+/*
+ * delete all node except head node if it exists
+ * Parameters: none
+ * Returns: length
+ */
+/**********************************************************************/
 void LinkList::Clear_List(){
 
     LNode *p = _has_HeadNode ? _head->next : _head;

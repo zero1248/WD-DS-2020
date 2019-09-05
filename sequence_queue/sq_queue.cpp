@@ -66,7 +66,7 @@ bool DeQueue_Sq(SqQueue &Q, ElemType_SqQueue &e){
     e = Q.data[Q.qfront];
     Q.qfront = (Q.qfront + 1) % queue_size;
 
-    return false;
+    return true;
 }
 
 
@@ -76,7 +76,7 @@ bool GetFront_Sq(SqQueue Q, ElemType_SqQueue &e){
         return false;
     e = Q.data[Q.qfront];
 
-    return false;
+    return true;
 }
 
 
@@ -86,7 +86,7 @@ bool GetRear_Sq(SqQueue Q, ElemType_SqQueue &e){
         return false;
     e = Q.data[Q.qrear-1];
 
-    return false;
+    return true;
 }
 
 

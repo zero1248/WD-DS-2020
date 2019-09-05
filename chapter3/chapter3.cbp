@@ -12,10 +12,15 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 					<Add directory="D:/Projects/001_codeblocks_project/c++/WD_DS/chapter3/" />
 					<Add directory="../sequence_stack" />
 					<Add directory="../sequence_queue" />
+					<Add directory="../linked_list" />
+					<Add directory="../linked_stack" />
+					<Add directory="../test_set" />
+					<Add directory="../linked_queue" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -35,16 +40,30 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../linked_list/linked_list_wd.cpp" />
+		<Unit filename="../linked_list/linked_list_wd.h" />
+		<Unit filename="../linked_queue/linked_queue.cpp" />
+		<Unit filename="../linked_queue/linked_queue.h" />
+		<Unit filename="../linked_stack/linked_stack.cpp" />
+		<Unit filename="../linked_stack/linked_stack.h" />
 		<Unit filename="../sequence_queue/sq_queue.cpp" />
 		<Unit filename="../sequence_queue/sq_queue.h" />
 		<Unit filename="../sequence_stack/sq_stack.cpp" />
 		<Unit filename="../sequence_stack/sq_stack.h" />
+		<Unit filename="../test_set/test_set.cpp" />
+		<Unit filename="../test_set/test_set.h" />
+		<Unit filename="../test_set/test_set.txt" />
+		<Unit filename="../test_set/test_set_int.txt" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion>
 				<search_path add="D:\Projects\001_codeblocks_project\c++\WD_DS\chapter3\" />
 				<search_path add="..\sequence_stack" />
 				<search_path add="..\sequence_queue" />
+				<search_path add="..\linked_queue" />
+				<search_path add="..\linked_stack" />
+				<search_path add="..\linked_list" />
+				<search_path add="..\test_set" />
 			</code_completion>
 			<envvars />
 			<debugger />

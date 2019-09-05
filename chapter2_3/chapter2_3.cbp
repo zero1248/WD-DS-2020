@@ -36,17 +36,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../linked_list/linked_list_wd.cpp" />
+		<Unit filename="../linked_list/linked_list_wd.h" />
 		<Unit filename="../test_set/test_set.cpp" />
 		<Unit filename="../test_set/test_set.h" />
 		<Unit filename="chapter2_3_wd.cpp" />
 		<Unit filename="chapter2_3_wd.h" />
-		<Unit filename="linked_list_wd.cpp" />
-		<Unit filename="linked_list_wd.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion>
 				<search_path add="D:\Projects\001_codeblocks_project\c++\WD_DS\chapter2_3\" />
 				<search_path add="..\test_set" />
+				<search_path add="..\linked_list" />
 			</code_completion>
 			<envvars />
 			<debugger />

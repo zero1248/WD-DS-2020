@@ -27,7 +27,18 @@
 	"linked_list_wd.h"
 	"test_set.h"
 
-1567434016 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2_3\main.cpp
+1567434251 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter2_3\main.cpp
 	<iostream>
 	"chapter2_3_wd.h"
+
+1567435745 source:d:\projects\001_codeblocks_project\c++\wd_ds\linked_list\linked_list_wd.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<typeinfo>
+	"linked_list_wd.h"
+	"test_set.h"
+
+1567683703 d:\projects\001_codeblocks_project\c++\wd_ds\linked_list\linked_list_wd.h
+	<iostream>
 

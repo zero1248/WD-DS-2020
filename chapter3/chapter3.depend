@@ -2,19 +2,49 @@
 1555134437 source:d:\projects\001_codeblocks_project\c++\wd_ds\sequence_stack\sq_stack.cpp
 	"sq_stack.h"
 
-1555134433 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_stack\sq_stack.h
+1567690256 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_stack\sq_stack.h
 
-1555142433 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter3\main.cpp
+1567691077 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter3\main.cpp
 	<iostream>
 	<iomanip>
 	"sq_stack.h"
 	"sq_queue.h"
+	"linked_stack.h"
 	<typeinfo>
 	<cstdio>
 
-1555142394 source:d:\projects\001_codeblocks_project\c++\wd_ds\sequence_queue\sq_queue.cpp
+1567678441 source:d:\projects\001_codeblocks_project\c++\wd_ds\sequence_queue\sq_queue.cpp
 	<iostream>
 	"sq_queue.h"
 
 1555142112 d:\projects\001_codeblocks_project\c++\wd_ds\sequence_queue\sq_queue.h
+
+1567671340 source:d:\projects\001_codeblocks_project\c++\wd_ds\linked_queue\linked_queue.cpp
+
+1567691140 source:d:\projects\001_codeblocks_project\c++\wd_ds\linked_stack\linked_stack.cpp
+	"linked_stack.h"
+	"linked_list_wd.h"
+
+1567690794 d:\projects\001_codeblocks_project\c++\wd_ds\linked_stack\linked_stack.h
+	"linked_list_wd.h"
+
+1567683703 d:\projects\001_codeblocks_project\c++\wd_ds\linked_list\linked_list_wd.h
+	<iostream>
+
+1555516313 source:d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.cpp
+	"test_set.h"
+
+1555516338 d:\projects\001_codeblocks_project\c++\wd_ds\test_set\test_set.h
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+
+1567435745 source:d:\projects\001_codeblocks_project\c++\wd_ds\linked_list\linked_list_wd.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<typeinfo>
+	"linked_list_wd.h"
+	"test_set.h"
 

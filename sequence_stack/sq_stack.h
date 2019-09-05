@@ -11,6 +11,7 @@
 #ifndef __SQ_STACK_H__
 #define __SQ_STACK_H__
 
+
 const int stack_size = 100;
 
 typedef char ElemType_SqStack;

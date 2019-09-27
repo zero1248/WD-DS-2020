@@ -11,8 +11,10 @@
 
 #include "test_set.h"
 
-extern const char test_set_path[] = "D:\\Projects\\001_codeblocks_project\\c++\\WD_DS\\test_set\\test_set.txt";
-extern const char test_set_path_int[] = "D:\\Projects\\001_codeblocks_project\\c++\\WD_DS\\test_set\\test_set_int.txt";
+//extern const char test_set_path[] = "D:\\Projects\\001_codeblocks_project\\c++\\WD_DS\\test_set\\test_set.txt";
+//extern const char test_set_path_int[] = "D:\\Projects\\001_codeblocks_project\\c++\\WD_DS\\test_set\\test_set_int.txt";
+extern const char test_set_path[] = "../test_set/test_set.txt";
+extern const char test_set_path_int[] = "../test_set/test_set_int.txt";
 
 /**********************************************************************/
 /*

@@ -72,30 +72,30 @@ using namespace std;
 
 
 // test sequence queue
-//int main(){
-//
-//    SqQueue Q;
-//    ElemType_SqQueue x;
-//    InitQueue_Sq(Q);
-//
-//    EnQueue_Sq(Q, 123);
-//    EnQueue_Sq(Q, 12);
-//    EnQueue_Sq(Q, 1);
-//
-////    DeQueue_Sq(Q, x);
-////    cout << x << endl;
-////    DeQueue_Sq(Q, x);
-////    cout << x << endl;
-////    DeQueue_Sq(Q, x);
-////    cout << x << endl;
-//
-//    GetFront_Sq(Q, x);
+int main(){
+
+    SqQueue Q;
+    ElemType_SqQueue x;
+    InitQueue_Sq(Q);
+
+    EnQueue_Sq(Q, 123);
+    EnQueue_Sq(Q, 12);
+    EnQueue_Sq(Q, 1);
+
+//    DeQueue_Sq(Q, x);
 //    cout << x << endl;
-//    GetRear_Sq(Q, x);
+//    DeQueue_Sq(Q, x);
 //    cout << x << endl;
-//
-//    DestroyQueue_Sq(Q);
-//
-//
-//    return 0;
-//}
+//    DeQueue_Sq(Q, x);
+//    cout << x << endl;
+
+    GetFront_Sq(Q, x);
+    cout << x << endl;
+    GetRear_Sq(Q, x);
+    cout << x << endl;
+
+    DestroyQueue_Sq(Q);
+
+
+    return 0;
+}

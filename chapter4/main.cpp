@@ -10,25 +10,41 @@
 */
 
 #include <iostream>
-#include "binary_tree.h"
+#include "BinTree.h"
+#include "BinNode.h"
 
 using namespace std;
 
+template <class T>
+void visit(BTNode<T>* p );
+
 int main(){
 
-//    BinTree<int> Tree;
-//    BTNode<int> *p, *q;
     BinTree<int> Tree;
-    BTNode<int> *p;
-    p = Tree.InsertRoot(123);
-//    q = Tree.InsertLC(p, 2);
+    BTNode<int> *p, *q, *r;
 
-    cout << p->data << endl;
-//    cout << p->data << endl << q->data << endl;
+    p = Tree.insertRoot(123);
+    q = Tree.insertLC(Tree.Root(), 234);
+    r = Tree.insertRC(Tree.Root(), 345);
 
+
+    cout << p->data << endl << q->data << endl << r->data << endl;
+
+    Tree.InOrder(visit);
 
 
 
 
     return 0;
 }
+
+
+
+template <class T>
+void visit(BTNode<T>* p ){
+
+    cout << p->data << " ";
+
+}
+
+

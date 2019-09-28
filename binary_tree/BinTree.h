@@ -1,10 +1,10 @@
 /*
 *********************************************************************************************************
 *
-* file name:   BinTree.cpp
+* file name:   BinTree.h
 * creator:     Isaac
 * date:        20190413
-* description: binary tree member functioin
+* description: binary tree
 *
 *********************************************************************************************************
 */
@@ -15,114 +15,86 @@
 #include <iostream>
 #include "BinNode.h"
 
-using namespace std;
 
-/**********************************************************************/
-/*
- * insert a root node into the binary tree
- * Parameters: init_data
- * Returns: _root
- */
-/**********************************************************************/
-template<typename T>  
-BTNode<T> *BinTree<T>::InsertRoot(const T &e){
+template<typename T> // 二叉树模板
+class BinTree{
 
-    _root = new BTNode<T>(e);
-    _size = 1;
+public:
+    // 构造/析构
+    BinTree(): _size(0), _root(NULL){}
+    ~BinTree(){
+       if(_size > 0){
+            destroy(_root);
+            // remove(_root);
+       }
+    }
 
-    return _root;
-}
+    // 基本操作
 
+    BTNode<T>* insertRoot(const T &e); // 树中插入根结点
+    BTNode<T>* insertLC(BTNode<T>* p, const T &e); // e 作为 x 的左孩子插入
+    BTNode<T>* insertRC(BTNode<T>* p, const T &e); // e 作为 x 的右孩子插入
+//    BTNode<T>* AttachLC(BTNode<T>* p, BinTree<T>* &T); // T 作为 x 的左子树插入
+//    BTNode<T>* AttachRC(BTNode<T>* p, BinTree<T>* &T); // T 作为 x 的右子树插入
 
-template<typename T> 
-BTNode<T>* BinTree<T>::InsertLC(BTNode<T>* p, const T &e){
+    BTNode<T>* Root() const{  // 获取二叉树根结点
+        return _root;
+    }
 
-    p -> lc = new BTNode<T>(e, this);
-    _size++;
+    int Size() const{  // 获取二叉树规模
+        return _size;
+    }
 
-    return p -> lc;
-}
+    bool isEmpty() const{ // 判空
+        return !_root;
+    }
 
+    BTNode<T>* Parent(BTNode<T>* cur) const{ // 返回某结点的父结点
+        return (_root == NULL || _root == cur) ? NULL : Parent(_root, cur);
+    }
 
-template<typename T>
-BTNode<T>* BinTree<T>::InsertRC(BTNode<T>* p, const T &e){
+    BTNode<T>* LeftChild(BTNode<T>* cur) const{ // 返回某结点的左孩子结点
+        return (cur == NULL) ? NULL : cur->lc;
+    }
 
-    p -> rc = new BTNode<T>(e, this);
-    _size++;
+    BTNode<T>* RightChild(BTNode<T>* cur) const{ // 返回某结点的右孩子结点
+        return(cur == NULL) ? NULL : cur->rc;
+    }
 
-    return p -> rc;
-}
-
-
-// template<typename T>
-// BTNode<T>* BinTree<T>::AttachLC(BTNode<T>* p, BinTree<T>* &T){
-
-
-// }
-
-
-// template<typename T>
-// BTNode<T>* BinTree<T>::AttachRC(BTNode<T>* p, BinTree<T>* &T){
-
-
-// }
+    int Height(){ // 返回树的高度（深度）
+        return Height(_root);
+    }
 
 
-//返回父节点，从结点 somenode 开始，搜索 cur 结点的父结点
-BTNode<T>* Parent(BTNode<T>* somenode, BTNode<T>* cur){
-
-    BTNode<T>* p; 
-    if(cur == NULL)
-        return NULL;
-    
-    if(somenode->lc == cur || somenode->rc == cur)  //找到则返回父结点
-        return somenode;
-      
-    if((p = Parent(somenode->lc, cur)) != NULL)  //左子树递归查找
-        return p;
-    else   //右子树递归查找
-        return Parent(somenode->rc, cur);
-}
+    BTNode<T>* Parent(BTNode<T>* somenode, BTNode<T>* cur);
+    int Height(BTNode<T>* subTree);
 
 
 
 
+    // 先序遍历
+    void PreOrder(void(*visit)(BTNode<T>* p));
+    // 中序遍历
+    void InOrder(void(*visit)(BTNode<T>* p));
+    // 后序遍历
+    void PostOrder(void(*visit)(BTNode<T>* p));
+    // 层次遍历
+    void LevelOrder(void(*visit)(BTNode<T>* p));
 
 
+    int remove(BTNode<T>* p);  // 删除二叉树中删除 p 结点及其后代
+    void destroy(BTNode<T>* subTree); // 销毁结点，只能销毁结点，不能销毁数据域中开辟的内存
 
+protected:
 
+    BTNode<T>* _root; // 根结点
+    int _size;   // 树的规模
+    //int _height; // 树的高度
 
+};
 
+#include "BinTree_implementation.h"
+#include "BinTree_remove.h"
+#include "BinTree_traversal.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
-// 析构
-template<typename T>  //删除 p 节点及其后代，返回被删除节点的数值
-int BinTree<T>::destroy(BTNode<T>* p){
-
-    return 0;
-}
-
-
-//void call(){
-//    BinTree<int> Tree;
-//    Tree.InsertRoot(123);
-//
-//}
-
-
-
-#endif __BINTREE_H__
-
-
-
+#endif // __BINTREE_H__

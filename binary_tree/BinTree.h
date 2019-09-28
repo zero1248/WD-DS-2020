@@ -66,21 +66,32 @@ public:
     }
 
 
-    BTNode<T>* Parent(BTNode<T>* somenode, BTNode<T>* cur);
+    BTNode<T>* Parent(BTNode<T>* somenode, BTNode<T>* cur); // 返回结点的父结点 // ! 有没有必要？ 
     int Height(BTNode<T>* subTree);
 
 
 
 
-    // 先序遍历
-    void PreOrder(void(*visit)(BTNode<T>* p));
-    // 中序遍历
-    void InOrder(void(*visit)(BTNode<T>* p));
-    // 后序遍历
-    void PostOrder(void(*visit)(BTNode<T>* p));
-    // 层次遍历
-    void LevelOrder(void(*visit)(BTNode<T>* p));
-
+    
+    void PreOrder(void(*visit)(BTNode<T>*)){ // 先序遍历
+        if(_root)
+            _root -> PreOrder(visit);
+    }
+    
+    void InOrder(void(*visit)(BTNode<T>*)){ // 中序遍历
+        if(_root)
+            _root -> InOrder(visit);
+    }
+    
+    void PostOrder(void(*visit)(BTNode<T>*)){ // 后序遍历
+        if(_root)
+            _root -> PostOrder(visit);
+    }
+    
+    void LevelOrder(void(*visit)(BTNode<T>*)){ // 层次遍历
+        if(_root)
+            _root -> LevelOrder(visit);
+    }
 
     int remove(BTNode<T>* p);  // 删除二叉树中删除 p 结点及其后代
     void destroy(BTNode<T>* subTree); // 销毁结点，只能销毁结点，不能销毁数据域中开辟的内存
@@ -95,6 +106,5 @@ protected:
 
 #include "BinTree_implementation.h"
 #include "BinTree_remove.h"
-#include "BinTree_traversal.h"
 
 #endif // __BINTREE_H__

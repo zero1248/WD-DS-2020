@@ -80,4 +80,4 @@ int BinTree<T>::remove(BTNode<T>* p){
     return n; // 返回删除节点总数
 }
 
-#endif __BINTREE_REMOVE_H__
+#endif //__BINTREE_REMOVE_H__

@@ -37,9 +37,19 @@ struct BTNode{
 
     BTNode<T>* insertAsLC(T const &e); //作为当前节点的左孩子插入新节点
     BTNode<T>* insertAsRC(T const &e); //作为当前节点的右孩子插入新节点
+
+    // 先序遍历
+    void PreOrder(void(*visit)(BTNode<T>*));
+    // 中序遍历
+    void InOrder(void(*visit)(BTNode<T>*));
+    // 后序遍历
+    void PostOrder(void(*visit)(BTNode<T>*));
+    // 层次遍历
+    void LevelOrder(void(*visit)(BTNode<T>*));
 };
 
 #include "BinNode_implementation.h"
+#include "BinNode_traversal.h"
 
 #endif // __BINNODE_H__
 

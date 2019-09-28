@@ -16,32 +16,37 @@
 using namespace std;
 
 template <class T>
-void visit(BTNode<T>* p );
+void visit1(BTNode<T>* p);
 
 int main(){
 
     BinTree<int> Tree;
     BTNode<int> *p, *q, *r;
 
-    p = Tree.insertRoot(123);
-    q = Tree.insertLC(Tree.Root(), 234);
-    r = Tree.insertRC(Tree.Root(), 345);
+    p = Tree.insertRoot(1);
+    q = Tree.insertLC(Tree.Root(), 2);
+    r = Tree.insertRC(Tree.Root(), 3);
 
 
     cout << p->data << endl << q->data << endl << r->data << endl;
 
-    Tree.InOrder(visit);
+    Tree.PreOrder(visit1);
+    cout << endl;
+    Tree.InOrder(visit1);
+    cout << endl;
+    Tree.PostOrder(visit1);
+    cout << endl;
+    
 
-
+    cout << rand();
 
 
     return 0;
 }
 
 
-
 template <class T>
-void visit(BTNode<T>* p ){
+void visit1(BTNode<T>* p){
 
     cout << p->data << " ";
 

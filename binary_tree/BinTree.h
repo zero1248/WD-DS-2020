@@ -9,6 +9,14 @@
 *********************************************************************************************************
 */
 
+#ifndef __BINTREE_H__
+#define __BINTREE_H__
+
+#include <iostream>
+#include "BinNode.h"
+
+using namespace std;
+
 /**********************************************************************/
 /*
  * insert a root node into the binary tree
@@ -60,8 +68,47 @@ BTNode<T>* BinTree<T>::InsertRC(BTNode<T>* p, const T &e){
 // }
 
 
+//返回父节点，从结点 somenode 开始，搜索 cur 结点的父结点
+BTNode<T>* Parent(BTNode<T>* somenode, BTNode<T>* cur){
+
+    BTNode<T>* p; 
+    if(cur == NULL)
+        return NULL;
+    
+    if(somenode->lc == cur || somenode->rc == cur)  //找到则返回父结点
+        return somenode;
+      
+    if((p = Parent(somenode->lc, cur)) != NULL)  //左子树递归查找
+        return p;
+    else   //右子树递归查找
+        return Parent(somenode->rc, cur);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 析构
 template<typename T>  //删除 p 节点及其后代，返回被删除节点的数值
-int BinTree<T>::remove(BTNode<T>* p){
+int BinTree<T>::destroy(BTNode<T>* p){
 
     return 0;
 }
@@ -72,4 +119,10 @@ int BinTree<T>::remove(BTNode<T>* p){
 //    Tree.InsertRoot(123);
 //
 //}
+
+
+
+#endif __BINTREE_H__
+
+
 

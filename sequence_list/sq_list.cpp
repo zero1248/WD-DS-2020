@@ -360,7 +360,7 @@ bool Binary_Search(SqList L, ElemType_SqList x, int &pos){
     while(low <= high){
         mid = (low + high) / 2;
         if(L.data[mid] == x){
-            pos = mid + 1;  //pos ÊÇ x µÄÎ»ÖÃ
+            pos = mid + 1;  //pos æ˜¯ x çš„ä½ç½®
             return true;
         }
         else if(L.data[mid] < x)
@@ -368,7 +368,7 @@ bool Binary_Search(SqList L, ElemType_SqList x, int &pos){
         else
             high = mid - 1;
     }
-    pos = high + 1; //pos ÊÇ±ÈxÐ¡µÄÊýÖÐ×î´óÊýµÄÎ»ÖÃ
+    pos = high + 1; //pos æ˜¯æ¯”xå°çš„æ•°ä¸­æœ€å¤§æ•°çš„ä½ç½®
     return false;
 }
 

@@ -37,8 +37,8 @@ using namespace std;
 //        L.Generate_Test_Set(i);
 //        L.Print_List();
 //
-////        Delete_x2(L._head, x); // 递归方法
-//        Delete_x3(L._head, x);  // 非递归方法
+////        Delete_x2(L._head, x); // 閫掑綊鏂规硶
+//        Delete_x3(L._head, x);  // 闈為�掑綊鏂规硶
 //
 //        L.Print_List();
 //        L.Clear_List();
@@ -77,7 +77,7 @@ using namespace std;
 //        L.Generate_Test_Set(i);
 //        L.Print_List();
 //
-//        Delete_Min(L._head); //因为有重复，删除的实际是第一个最小的结点
+//        Delete_Min(L._head); //鍥犱负鏈夐噸澶嶏紝鍒犻櫎鐨勫疄闄呮槸绗竴涓渶灏忕殑缁撶偣
 //
 //        L.Print_List();
 //        L.Clear_List();

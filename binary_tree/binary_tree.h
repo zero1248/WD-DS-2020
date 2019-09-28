@@ -5,7 +5,7 @@
 * creator:     Isaac
 * date:        20190413
 * description: binary tree
-*
+* 
 *********************************************************************************************************
 */
 
@@ -13,46 +13,26 @@
 #define __BINARY_TREE_H__
 
 #include <iostream>
+#include "BinNode.h"
+
 using namespace std;
 
-#define BTNodePos BTNode<T>*
 
-
-template<typename T>
-struct BTNode{
-    T data;
-    BTNode<T> *parent;
-    BTNode<T> *lc, *rc;
-    BTNode():
-        data(0),
-        parent(NULL),
-        lc(NULL),
-        rc(NULL){}
-
-    BTNode(const T &e, BTNode<T> *p = NULL, BTNode<T> *l = NULL, BTNode<T> *r = NULL):
-        data(e),
-        parent(p),
-        lc(l),
-        rc(r){}
-};
-
-//typedef BTNode<T>* BTNodePos(T)
-
-
-template<typename T>
+template<typename T> // 二叉树模板
 class BinTree{
 
 public:
-
     // 构造/析构
     BinTree(): _size(0), _root(NULL){}
     ~BinTree(){
-//        if(_size > 0)
-//            remove(_root);
+    //    if(_size > 0){
+    //         destroy(_root);
+    //         // remove(_root);
+    //    }
     }
-    // 基本操作
 
-    BTNodePos Root() const{  // 获取二叉树根结点
+    // 基本操作
+    BTNode<T>* Root() const{  // 获取二叉树根结点
         return _root;
     }
     int Size() const{  // 获取二叉树规模
@@ -61,17 +41,17 @@ public:
     bool isEmpty() const{ // 判空
         return !_root;
     }
-    BTNodePos InsertRoot(const T &e);
-    BTNodePos InsertLC(BTNodePos p, const T &e); // e 作为 x 的左孩子插入
-    BTNodePos InsertRC(BTNodePos p, const T &e); // e 作为 x 的右孩子插入
-//    BTNodePos AttachLC(BTNodePos p, BinTree<T>* &T); // T 作为 x 的左子树插入
-//    BTNodePos AttachRC(BTNodePos p, BinTree<T>* &T); // T 作为 x 的右子树插入
+    BTNode<T>* InsertRoot(const T &e); // 树中插入根结点
+    BTNode<T>* InsertLC(BTNode<T>* p, const T &e); // e 作为 x 的左孩子插入
+    BTNode<T>* InsertRC(BTNode<T>* p, const T &e); // e 作为 x 的右孩子插入
+//    BTNode<T>* AttachLC(BTNode<T>* p, BinTree<T>* &T); // T 作为 x 的左子树插入
+//    BTNode<T>* AttachRC(BTNode<T>* p, BinTree<T>* &T); // T 作为 x 的右子树插入
 
-    int remove(BTNodePos p);
+    int remove(BTNode<T>* p);
 
 private:
 
-    BTNodePos _root; // 根结点
+    BTNode<T>* _root; // 根结点
     int _size;   // 树的规模
 
 };

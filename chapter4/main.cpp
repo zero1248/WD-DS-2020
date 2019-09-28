@@ -1,5 +1,15 @@
+/*
+*********************************************************************************************************
+*
+* file name:   main.cpp
+* creator:     Isaac
+* date:        20190403
+* description: test the data sturcture module(chapter4)
+*
+*********************************************************************************************************
+*/
+
 #include <iostream>
-//#include "binary_tree.cpp"
 #include "binary_tree.h"
 
 using namespace std;

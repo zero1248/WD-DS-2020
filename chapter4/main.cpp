@@ -10,8 +10,10 @@
 */
 
 #include <iostream>
+#include <cstdlib>
 #include "BinTree.h"
 #include "BinNode.h"
+
 
 using namespace std;
 
@@ -21,14 +23,25 @@ void visit1(BTNode<T>* p);
 int main(){
 
     BinTree<int> Tree;
-    BTNode<int> *p, *q, *r;
 
-    p = Tree.insertRoot(1);
-    q = Tree.insertLC(Tree.Root(), 2);
-    r = Tree.insertRC(Tree.Root(), 3);
+    // BTNode<int> *p, *q, *r;  // 测试插入函数
+    // p = Tree.insertRoot(1);
+    // q = Tree.insertLC(Tree.Root(), 2);
+    // r = Tree.insertRC(Tree.Root(), 3);
+    // cout << p->data << endl << q->data << endl << r->data << endl;
 
-
-    cout << p->data << endl << q->data << endl << r->data << endl;
+    // int j;
+    // BTNode<int> *p = Tree.insertRoot(0);  // 随机生成一棵树，用于测试
+    // srand((unsigned)time(NULL));
+    // for(int i=1; i<10; i++){
+    //     switch(j = rand()%2){
+    //         case 0: p = Tree.insertLC(p, i); break;
+    //         case 1: p = Tree.insertRC(p, i); break;
+    //         default : break;
+    //     }
+    //     cout << j << " ";
+    // }
+    Tree.generateTestTree(10);
 
     Tree.PreOrder(visit1);
     cout << endl;
@@ -36,9 +49,6 @@ int main(){
     cout << endl;
     Tree.PostOrder(visit1);
     cout << endl;
-    
-
-    cout << rand();
 
 
     return 0;

@@ -93,6 +93,8 @@ public:
             _root -> LevelOrder(visit);
     }
 
+    void generateTestTree(int n);
+
     int remove(BTNode<T>* p);  // 删除二叉树中删除 p 结点及其后代
     void destroy(BTNode<T>* subTree); // 销毁结点，只能销毁结点，不能销毁数据域中开辟的内存
 

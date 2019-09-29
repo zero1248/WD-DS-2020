@@ -13,6 +13,7 @@
 #define __BINTREE_IMPLEMENTATION_H__
 
 #include "BinNode.h"
+#include <ctime>
 
 
 /**********************************************************************/
@@ -122,7 +123,33 @@ int BinTree<T>::Height(BTNode<T>* subTree){
     }
 }
 
-// 销毁结点，只能销毁结点
+
+// 生成测试树
+template<typename T>
+void BinTree<T>::generateTestTree(int n){
+    int j = 0;
+    BTNode<T> *p = this -> insertRoot(0);  // 随机生成一棵树，用于测试
+    srand((unsigned)time(NULL));
+    for(int i=1; i<n; i++){
+        switch(j = rand()%2){
+            case 0: p = this -> insertLC(p, i); break;
+            case 1: p = this -> insertRC(p, i); break;
+            default : break;
+        }
+        // cout << j << " ";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// 销毁结点及其子树，只能销毁结点
 // 数据域是指针的情况不适用
 template<typename T>
 void BinTree<T>::destroy(BTNode<T>* subTree){

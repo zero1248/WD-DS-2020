@@ -38,6 +38,8 @@ struct BTNode{
     BTNode<T>* insertAsLC(T const &e); //作为当前节点的左孩子插入新节点
     BTNode<T>* insertAsRC(T const &e); //作为当前节点的右孩子插入新节点
 
+    BTNode<T>* succ(); // 取当前结点的（中序）直接后继
+
     // 先序遍历
     void PreOrder(void(*visit)(BTNode<T>*));
     // 中序遍历

@@ -18,7 +18,7 @@
 using namespace std;
 
 template <class T>
-void visit1(BTNode<T>* p);
+void visit(BTNode<T>* p);
 
 int main(){
 
@@ -43,11 +43,13 @@ int main(){
     // }
     Tree.generateTestTree(10);
 
-    Tree.PreOrder(visit1);
+    Tree.PreOrder(visit);
     cout << endl;
-    Tree.InOrder(visit1);
+    Tree.InOrder(visit);
     cout << endl;
-    Tree.PostOrder(visit1);
+    Tree.PostOrder(visit);
+    cout << endl;
+    Tree.LevelOrder(visit);
     cout << endl;
 
 
@@ -56,7 +58,7 @@ int main(){
 
 
 template <class T>
-void visit1(BTNode<T>* p){
+void visit(BTNode<T>* p){
 
     cout << p->data << " ";
 

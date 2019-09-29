@@ -10,12 +10,12 @@
 1555163048 source:d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode.cpp
 	"BinNode.h"
 
-1569706217 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode.h
+1569763835 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode.h
 	<iostream>
 	"BinNode_implementation.h"
 	"BinNode_traversal.h"
 
-1569715656 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter4\main.cpp
+1569764281 source:d:\projects\001_codeblocks_project\c++\wd_ds\chapter4\main.cpp
 	<iostream>
 	<cstdlib>
 	"BinTree.h"
@@ -31,7 +31,7 @@
 	"BinTree_implementation.h"
 	"BinTree_remove.h"
 
-1569703664 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode_implementation.h
+1569765545 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode_implementation.h
 
 1569715944 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\bintree_implementation.h
 	"BinNode.h"
@@ -42,6 +42,8 @@
 1569704132 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\bintree_traversal.h
 	"BinNode.h"
 
-1569706484 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode_traversal.h
+1569767308 d:\projects\001_codeblocks_project\c++\wd_ds\binary_tree\binnode_traversal.h
 	"BinNode.h"
+	<stack>
+	<queue>
 

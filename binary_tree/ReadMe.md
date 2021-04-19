@@ -3,7 +3,7 @@
 
 文件说明：
 - BinNode.h 二叉树结点模板的定义
-- BinNode_implementation.h 二叉树结点插入函数的定义
+- BinNode_implementation.h 二叉树结点成员函数的定义
 - BinNode_traversal.h 二叉树结点遍历函数的定义
 - BinTree.h 二叉树模板类的定义
 - BinTree_implementation.h 二叉树成员函数的定义
@@ -19,6 +19,9 @@
   - 二叉树的四种遍历算法 √
   - 先序、中序、后序遍历的非递归算法（借助栈）√
   - 建立线索二叉树
+    - 先序
+    - 中序
+    - 后序
   - 线索二叉树的遍历
 
 

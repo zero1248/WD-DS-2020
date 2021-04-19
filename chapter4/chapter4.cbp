@@ -41,8 +41,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../binary_tree/BinNode.h" />
+		<Unit filename="../binary_tree/BinNode_implementation.h" />
+		<Unit filename="../binary_tree/BinNode_traversal.h" />
 		<Unit filename="../binary_tree/BinTree.h" />
-		<Unit filename="../binary_tree/binary_tree.h" />
+		<Unit filename="../binary_tree/BinTree_implementation.h" />
+		<Unit filename="../binary_tree/BinTree_remove.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion>
